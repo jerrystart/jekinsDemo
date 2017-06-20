@@ -15,19 +15,11 @@ def verCode = 14
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
     defaultConfig {
         applicationId "app.jekinsdemo.com.jenkinsdemo"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-
-    defaultConfig {
-        applicationId "com.henanjianye.soon.communityo2o"
-        minSdkVersion 14
-        targetSdkVersion 22
         multiDexEnabled true
         versionCode verCode
         versionName APP_VERSION
@@ -89,7 +81,7 @@ android {
                 newName = 'yj-android-v' +
                         APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
             } else {
-                
+
                 timeNow = getDate()
                 if (variant.buildType.name.equals('debug')) {
                     newName = "yj-android-v${APP_VERSION}-debug.apk"
