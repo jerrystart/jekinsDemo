@@ -31,7 +31,7 @@ android {
 
     signingConfigs {//(手动添加)
         release {//设置打正式包签名属性
-            storeFile file("/Users/hejie/Desktop/jenkins")
+            storeFile file("/Users/hejie/Desktop/jenkins/mRocker.KeyStore")
             storePassword "mrocker"
             keyAlias "mrocker"
             keyPassword "mrocker"
