@@ -28,6 +28,15 @@ android {
         buildConfigField 'String', 'API_SERVER_URL', RELEASE_API_SERVER_URL
         buildConfigField 'String', 'API_SERVER_URL_MALL', RELEASE_API_SERVER_URL_MALL
     }
+
+    signingConfigs {//(手动添加)
+        release {//设置打正式包签名属性
+            storeFile file("/Users/hejie/Desktop/jenkins")
+            storePassword "mrocker"
+            keyAlias "mrocker"
+            keyPassword "mrocker"
+        }
+    }
     buildTypes {
         release {
             buildConfigField 'String', 'API_SERVER_URL', RELEASE_API_SERVER_URL
