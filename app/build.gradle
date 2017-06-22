@@ -44,9 +44,9 @@ android {
             buildConfigField 'String', 'IM_SERVER_HOST', RELEASE_IM_SERVER_HOST
             buildConfigField 'int', 'IM_SERVER_PORT', RELEASE_IM_SERVER_PORT
             buildConfigField "boolean", "LEO_DEBUG", RELEASE_LEO_DEBUG
-            minifyEnabled true
+            minifyEnabled false
             zipAlignEnabled true
-            shrinkResources true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -90,7 +90,7 @@ android {
                 newName = 'yj-android-v' +
                         APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
             } else {
-
+                outDirectory = '/Users/hejie/Desktop/jenkins'
                 timeNow = getDate()
                 if (variant.buildType.name.equals('debug')) {
                     newName = "yj-android-v${APP_VERSION}-debug.apk"
